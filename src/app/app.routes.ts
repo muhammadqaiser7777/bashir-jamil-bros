@@ -1,25 +1,28 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
 import { AboutUs } from './pages/about-us/about-us';
-import { ContactUs } from './pages/contact-us/contact-us';
-import { SergicalSets } from './pages/sergical-sets/sergical-sets';
 import { Products } from './pages/products/products';
-import { Catalogues } from './pages/catalogues/catalogues';
-import { Certifications } from './pages/certifications/certifications';
-import { OurWork } from './pages/our-work/our-work';
-import { Facility } from './facility/facility';
-import { GlobalDistributors } from './global-distributors/global-distributors';
+import { Facilities } from './pages/facilities/facilities';
+import { Mission } from './pages/mission/mission';
+import { QualityAssurance } from './pages/quality-assurance/quality-assurance';
+import { Distributors } from './pages/distributors/distributors';
+import { Media } from './pages/media/media/media';
+import { Testimonials } from './pages/media/testimonials/testimonials';
+import { Blogs } from './pages/media/blogs/blogs';
+import { ContactUs } from './pages/contact-us/contact-us';
+
 
 export const routes: Routes = [
   { path: '', component: Home },
   { path: 'about-us', component: AboutUs },
-  { path: 'contact-us', component: ContactUs },
-  { path: 'sergical-sets', component: SergicalSets },
   { path: 'products', component: Products },
-  { path: 'catalogues', component: Catalogues },
-  { path: 'certifications', component: Certifications },
-  { path: 'our-work', component: OurWork },
-  { path: 'facility', component: Facility },
-  { path: 'global-distributors', component: GlobalDistributors },
+  { path: 'facilities', component: Facilities },
+  { path: 'mission', component: Mission },
+  { path: 'qa', component: QualityAssurance },
+  { path: 'distributors', component: Distributors },
+  { path: 'media', component: Media },
+  { path: 'testimonials', component: Testimonials },
+  { path: 'blogs', component: Blogs },
+  { path: 'contact-us', component: ContactUs },
   { path: '**', redirectTo: '' }
 ];

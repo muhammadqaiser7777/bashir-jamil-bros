@@ -20,33 +20,43 @@
         <img src="assets/images/cert-5.png" alt="Certification 5">
       </a>
     </div>
+    <a href="tel:+92523554100" class="call-btn">
+      <svg class="phone-icon" width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span class="call-text">+92 523 55 4100</span>
+    </a>
   </div>
   <nav class="navbar">
     <ul>
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-      <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
-      <li><a routerLink="/our-work" routerLinkActive="active">Our Work</a></li>
-      <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
-      <li><a routerLink="/facility" routerLinkActive="active">Facility</a></li>
-      <li><a routerLink="/catalogues" routerLinkActive="active">Product Catalogues</a></li>
-      <li><a routerLink="/sergical-sets" routerLinkActive="active">Surgical Sets</a></li>
-      <li><a routerLink="/certifications" routerLinkActive="active">Certifications</a></li>
-      <li><a routerLink="/global-distributors" routerLinkActive="active">Global Distributors</a></li>
-      <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/about-us" routerLinkActive="active" (click)="closeMenu()">About Us</a></li>
+      <li><a routerLink="/products" routerLinkActive="active" (click)="closeMenu()">Products</a></li>
+      <li><a routerLink="/facilities" routerLinkActive="active" (click)="closeMenu()">Facilities</a></li>
+      <li><a routerLink="/mission" routerLinkActive="active" (click)="closeMenu()">Mission</a></li>
+      <li><a routerLink="/qa" routerLinkActive="active" (click)="closeMenu()">Quality Assurance</a></li>
+      <li><a routerLink="/distributors" routerLinkActive="active" (click)="closeMenu()">Distributors</a></li>
+      <li><a routerLink="/media" routerLinkActive="active" (click)="closeMenu()">Media</a></li>
+      <li><a routerLink="/contact-us" routerLinkActive="active" (click)="closeMenu()">Contact Us</a></li>
     </ul>
   </nav>
-  <button class="hamburger" (click)="toggleMenu()">☰</button>
-  <nav class="mobile-nav" *ngIf="menuOpen">
+  <button class="hamburger" [class.open]="menuOpen" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="mobile-backdrop" *ngIf="menuOpen" (click)="closeMenu()"></div>
+  <nav class="mobile-nav" [class.open]="menuOpen" *ngIf="menuOpen">
     <ul>
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">Home</a></li>
-      <li><a routerLink="/about-us" routerLinkActive="active" (click)="toggleMenu()">About Us</a></li>
-      <li><a routerLink="/our-work" routerLinkActive="active" (click)="toggleMenu()">Our Work</a></li>
-      <li><a routerLink="/products" routerLinkActive="active" (click)="toggleMenu()">Products</a></li>
-      <li><a routerLink="/facility" routerLinkActive="active" (click)="toggleMenu()">Facility</a></li>
-      <li><a routerLink="/catalogues" routerLinkActive="active" (click)="toggleMenu()">Product Catalogues</a></li>
-      <li><a routerLink="/sergical-sets" routerLinkActive="active" (click)="toggleMenu()">Surgical Sets</a></li>
-      <li><a routerLink="/certifications" routerLinkActive="active" (click)="toggleMenu()">Certifications</a></li>
-      <li><a routerLink="/contact-us" routerLinkActive="active" (click)="toggleMenu()">Contact Us</a></li>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
+      <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+      <li><a routerLink="/facilities" routerLinkActive="active">Facilities</a></li>
+      <li><a routerLink="/mission" routerLinkActive="active">Mission</a></li>
+      <li><a routerLink="/qa" routerLinkActive="active">Quality Assurance</a></li>
+      <li><a routerLink="/distributors" routerLinkActive="active">Distributors</a></li>
+      <li><a routerLink="/media" routerLinkActive="active">Media</a></li>
+      <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
     </ul>
   </nav>
 </div>

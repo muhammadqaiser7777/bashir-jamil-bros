@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SergicalSets } from './sergical-sets';
+import { Media } from './media';
 
-describe('SergicalSets', () => {
-  let component: SergicalSets;
-  let fixture: ComponentFixture<SergicalSets>;
+describe('Media', () => {
+  let component: Media;
+  let fixture: ComponentFixture<Media>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SergicalSets]
+      imports: [Media]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SergicalSets);
+    fixture = TestBed.createComponent(Media);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

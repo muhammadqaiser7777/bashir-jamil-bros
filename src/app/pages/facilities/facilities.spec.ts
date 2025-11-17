@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GlobalDistributors } from './global-distributors';
+import { Facilities } from './facilities';
 
-describe('GlobalDistributors', () => {
-  let component: GlobalDistributors;
-  let fixture: ComponentFixture<GlobalDistributors>;
+describe('Facilities', () => {
+  let component: Facilities;
+  let fixture: ComponentFixture<Facilities>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GlobalDistributors]
+      imports: [Facilities]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GlobalDistributors);
+    fixture = TestBed.createComponent(Facilities);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
