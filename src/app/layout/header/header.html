@@ -1,0 +1,52 @@
+<div class="header">
+  <div class="top-line">
+    <a routerLink="/" class="logo-link">
+      <img src="assets/images/bashir-jamil-logo.png" alt="Bashir Jamil Bros Logo" class="logo">
+    </a>
+    <div class="certifications">
+      <a routerLink="/certifications">
+        <img src="assets/images/cert-1.png" alt="Certification 1">
+      </a>
+      <a routerLink="/certifications">
+        <img src="assets/images/cert-2.png" alt="Certification 2">
+      </a>
+      <a routerLink="/certifications">
+        <img src="assets/images/cert-3.png" alt="Certification 3">
+      </a>
+      <a routerLink="/certifications">
+        <img src="assets/images/cert-4.png" alt="Certification 4">
+      </a>
+      <a routerLink="/certifications">
+        <img src="assets/images/cert-5.png" alt="Certification 5">
+      </a>
+    </div>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
+      <li><a routerLink="/our-work" routerLinkActive="active">Our Work</a></li>
+      <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+      <li><a routerLink="/facility" routerLinkActive="active">Facility</a></li>
+      <li><a routerLink="/catalogues" routerLinkActive="active">Product Catalogues</a></li>
+      <li><a routerLink="/sergical-sets" routerLinkActive="active">Surgical Sets</a></li>
+      <li><a routerLink="/certifications" routerLinkActive="active">Certifications</a></li>
+      <li><a routerLink="/global-distributors" routerLinkActive="active">Global Distributors</a></li>
+      <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" (click)="toggleMenu()">☰</button>
+  <nav class="mobile-nav" *ngIf="menuOpen">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="/about-us" routerLinkActive="active" (click)="toggleMenu()">About Us</a></li>
+      <li><a routerLink="/our-work" routerLinkActive="active" (click)="toggleMenu()">Our Work</a></li>
+      <li><a routerLink="/products" routerLinkActive="active" (click)="toggleMenu()">Products</a></li>
+      <li><a routerLink="/facility" routerLinkActive="active" (click)="toggleMenu()">Facility</a></li>
+      <li><a routerLink="/catalogues" routerLinkActive="active" (click)="toggleMenu()">Product Catalogues</a></li>
+      <li><a routerLink="/sergical-sets" routerLinkActive="active" (click)="toggleMenu()">Surgical Sets</a></li>
+      <li><a routerLink="/certifications" routerLinkActive="active" (click)="toggleMenu()">Certifications</a></li>
+      <li><a routerLink="/contact-us" routerLinkActive="active" (click)="toggleMenu()">Contact Us</a></li>
+    </ul>
+  </nav>
+</div>
