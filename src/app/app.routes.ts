@@ -20,9 +20,11 @@ export const routes: Routes = [
   { path: 'mission', component: Mission },
   { path: 'qa', component: QualityAssurance },
   { path: 'distributors', component: Distributors },
-  { path: 'media', component: Media },
-  { path: 'testimonials', component: Testimonials },
-  { path: 'blogs', component: Blogs },
+  { path: 'media', component: Media, children: [
+    { path: 'blogs', component: Blogs },
+    { path: 'testimonials', component: Testimonials },
+    { path: '', redirectTo: 'blogs', pathMatch: 'full' }
+  ] },
   { path: 'contact-us', component: ContactUs },
   { path: '**', redirectTo: '' }
 ];
